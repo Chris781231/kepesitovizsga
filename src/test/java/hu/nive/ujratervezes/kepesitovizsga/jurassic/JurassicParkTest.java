@@ -19,6 +19,7 @@ public class JurassicParkTest {
     void init() throws SQLException {
         MariaDbDataSource dataSource;
         dataSource = new MariaDbDataSource();
+        // Change port to 3308 because I run MariaDb on this port
         dataSource.setUrl("jdbc:mariadb://localhost:3308/employees?useUnicode=true");
         dataSource.setUser("employees");
         dataSource.setPassword("employees");
