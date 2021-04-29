@@ -18,7 +18,7 @@ public class JurassicPark {
 
     public List<String> checkOverpopulation() {
         List<String> result = new ArrayList<>();
-        String query = "SELECT `breed` FROM `dinosaur` WHERE `expected` != `actual` ORDER BY `breed`";
+        String query = "SELECT `breed` FROM `dinosaur` WHERE `actual` > `expected` ORDER BY `breed`";
 
         try (
                 Connection conn = dataSource.getConnection();
